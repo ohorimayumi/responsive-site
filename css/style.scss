@@ -1,0 +1,169 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #ffffff;
+$subColor: #cde6ee;
+$keyColor: #d1d0cb;
+$fontColor: #898989;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center, .text-center2, .text-center3, .text-center4 {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header
+------------------------------------------------------------*/
+
+header {
+
+  img{
+    max-width:100%;
+    width:100%;
+    height:auto;
+  }
+  
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 20px 0;
+  
+  h2{
+    @extend .abel;
+    @extend .uppercase;
+    color: $fontColor;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  
+}
+    
+
+  #content1
+    {
+  background-color: $subColor;
+  .container1 {
+    @include display-flex;
+    justify-content: space-between;
+   
+   
+   
+    .text-box {
+    @include flex(1);
+    margin: 10px;
+    background-color: $keyColor;
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+    
+    
+  
+    .title-box {
+    @include flex(1);
+    background-color: $fontColor;
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+    
+
+      }
+    
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    color: $fontColor;
+    margin-bottom:10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  
+  .text-center2{
+    color: $baseColor;
+
+
+  }}}}
+
+  #content2 {
+  background-color: $keyColor;
+  .container2 {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+    width:100%;
+  .text-center3{
+    padding:0;
+  }
+  
+    .bottom {    
+    @include flex(1);
+    margin: 0 auto;
+    background-color: $fontColor;
+    width:30%;
+    color: $baseColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }}}
+  
+      @media(max-width:768px)
+{
+  header{
+    img{
+    max-height:400px;
+  
+  } }
+  
+  section{
+    .container1{
+    flex-direction: column;
+    max-width:100%;
+     }
+  
+}}
+
+// PC
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+}
+  
