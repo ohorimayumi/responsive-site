@@ -27,22 +27,11 @@ body {
 
 /* Font
 ------------------------------------------------------------*/
-.abel, #content1 .container1 .text-box h2.tex-center, #content1 .container1 .text-box h3.text-center, #content1 .container1 .text-box .text-center2 {
+.abel, #content1 h2.tex-center, #content1 h3.text-center, #content1 .text-center2 {
   font-family: 'Abel', sans-serif; }
 
-.uppercase, #content1 .container1 .text-box h2.tex-center, #content1 .container1 .text-box h3.text-center, #content1 .container1 .text-box .text-center2 {
+.uppercase, #content1 h2.tex-center, #content1 h3.text-center, #content1 .text-center2 {
   text-transform: uppercase; }
-
-/* Header
-------------------------------------------------------------*/
-header {
-  height: 450px; }
-  header #top-pic {
-    max-height: 450px;
-    height: 450px;
-    background: url("../images/top-pic.jpg");
-    background-size: cover;
-    background-position: center; }
 
 /* Contents
 ------------------------------------------------------------*/
@@ -51,43 +40,39 @@ section {
 
 #content1 {
   background-color: #cde6ee; }
-  #content1 .container1 {
+  #content1 .container1 .text-box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px;
+    background-color: #d1d0cb;
     display: -webkit-flex;
     display: flex;
-    justify-content: space-between; }
-    #content1 .container1 .text-box {
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+    #content1 .container1 .text-box .title-box {
       -webkit-flex: 1;
       flex: 1;
-      margin: 10px;
-      background-color: #d1d0cb;
+      background-color: #898989;
       display: -webkit-flex;
       display: flex;
       justify-content: space-between;
       -webkit-flex-direction: column;
-      flex-direction: column; }
-      #content1 .container1 .text-box .title-box {
-        -webkit-flex: 1;
-        flex: 1;
-        background-color: #898989;
-        display: -webkit-flex;
-        display: flex;
-        justify-content: space-between;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        padding: 0 20px; }
-      #content1 .container1 .text-box h2.tex-center {
-        color: #898989;
-        margin-bottom: 10px;
-        font-size: 3.5rem;
-        font-weight: bold; }
-      #content1 .container1 .text-box h3.text-center {
-        color: #898989;
-        margin-bottom: 20px;
-        font-size: 3rem;
-        font-weight: bold; }
-      #content1 .container1 .text-box .text-center2 {
-        color: #ffffff;
-        font-size: 1.6rem; }
+      flex-direction: column;
+      padding: 0 20px; }
+  #content1 h2.tex-center {
+    color: #898989;
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+    font-weight: bold; }
+  #content1 h3.text-center {
+    color: #898989;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold; }
+  #content1 .text-center2 {
+    color: #ffffff;
+    font-size: 1.6rem; }
 
 #content2 {
   background-color: #d1d0cb; }
@@ -117,6 +102,8 @@ section {
       box-sizing: border-box; }
 
 @media (max-width: 768px) {
+   /* Header
+------------------------------------------------------------*/
   header {
     height: 400px; }
     header #top-pic {
@@ -124,14 +111,27 @@ section {
       background: url("../images/top-pic.jpg");
       background-size: cover;
       background-position: center,center; }
-    header section .container1 {
-      flex-direction: column;
-      width: 80%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto; } }
+
+  #content1 .container1 {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto; } }
 @media (min-width: 769px) {
-  /* Base
-  ------------------------------------------------------------*/ }
+  /* Header
+  ------------------------------------------------------------*/
+  header {
+    height: 450px; }
+    header #top-pic {
+      max-height: 450px;
+      height: 450px;
+      background: url("../images/top-pic.jpg");
+      background-size: cover;
+      background-position: center; }
+
+  #content1 .container1 {
+    flex-direction: row;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between; } }
 
 /*# sourceMappingURL=style.css.map */

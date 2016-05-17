@@ -46,20 +46,6 @@ body{
   text-transform: uppercase;
 }
 
-/* Header
-------------------------------------------------------------*/
-
-header {
-    height:450px;
-  #top-pic {
-    max-height:450px;
-    height:450px;
-    background:url("../images/top-pic.jpg");
-    background-size:cover;
-    background-position:center;
-}
-
-}
 
 /* Contents
 ------------------------------------------------------------*/
@@ -73,30 +59,23 @@ section {
     {
   background-color: $subColor;
   .container1 {
-    @include display-flex;
-    justify-content: space-between;
-   
-   
-   
     .text-box {
     @include flex(1);
     margin: 10px;
     background-color: $keyColor;
     @include display-flex;
     justify-content: space-between;
-    @include flex-direction(column);
+     @include flex-direction(column);
     
-    
-  
-    .title-box {
+     .title-box {
     @include flex(1);
     background-color: $fontColor;
     @include display-flex;
     justify-content: space-between;
-    @include flex-direction(column);
+     @include flex-direction(column);
     padding:0 20px;
 
-      }
+      }}}
     
   
   
@@ -126,7 +105,7 @@ section {
     
 
 
-  }}}}
+  }}
 
   #content2 {
   background-color: $keyColor;
@@ -153,6 +132,8 @@ section {
   
       @media(max-width:768px)
 {
+   /* Header
+------------------------------------------------------------*/
    header{
      height:400px;
    #top-pic {
@@ -161,21 +142,37 @@ section {
      background-size:cover;
      background-position:center,center;
  
-   }
+   }}
   
-  section{
+    #content1{
     .container1{
-    flex-direction: column;
-    width:80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+      flex-direction:column;
+      width:80%;
+      margin:0 auto;
      }
-  }}}
+
+  }}
 
 // PC
 @media (min-width:769px) {
-  /* Base
-  ------------------------------------------------------------*/
-}
+
   
+/* Header
+------------------------------------------------------------*/
+header {
+    height:450px;
+  #top-pic {
+    max-height:450px;
+    height:450px;
+    background:url("../images/top-pic.jpg");
+    background-size:cover;
+    background-position:center;
+}}
+  
+  #content1
+    {
+  .container1 {
+    flex-direction:row;
+    @include display-flex;
+    justify-content: space-between;
+   }}}
