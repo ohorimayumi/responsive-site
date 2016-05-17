@@ -22,10 +22,6 @@ body{
   background-color: $baseColor;
 }
 
-a {
-  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
-  text-decoration: none;
-}
 
 /* Align
 ------------------------------------------------------------*/
@@ -35,7 +31,7 @@ a {
 
 /* Layout
 ------------------------------------------------------------*/
-.block-center {
+#container1, #container2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -54,29 +50,22 @@ a {
 ------------------------------------------------------------*/
 
 header {
+    height:450px;
+  #top-pic {
+    max-height:450px;
+    height:450px;
+    background:url("../images/top-pic.jpg");
+    background-size:cover;
+    background-position:center;
+}
 
-  img{
-    max-width:100%;
-    width:100%;
-    height:auto;
-  }
-  
 }
 
 /* Contents
 ------------------------------------------------------------*/
 // Common Styles
 section {
-  padding: 20px 0;
-  
-  h2{
-    @extend .abel;
-    @extend .uppercase;
-    color: $fontColor;
-    font-size: 2.4rem;
-    font-weight: bold;
-  }
-  
+  padding:30px 0;
 }
     
 
@@ -105,21 +94,36 @@ section {
     @include display-flex;
     justify-content: space-between;
     @include flex-direction(column);
-    
+    padding:0 20px;
 
       }
     
-  h3 {
+  
+  
+  h2.tex-center{
     @extend .abel;
     @extend .uppercase;
     color: $fontColor;
     margin-bottom:10px;
-    font-size: 2.4rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  h3.text-center {
+    @extend .abel;
+    @extend .uppercase;
+    color: $fontColor;
+    margin-bottom:20px;
+    font-size: 3rem;
     font-weight: bold;
   }
   
   .text-center2{
     color: $baseColor;
+    @extend .abel;
+    @extend .uppercase;
+    font-size:1.6rem;
+    
 
 
   }}}}
@@ -138,6 +142,8 @@ section {
     .bottom {    
     @include flex(1);
     margin: 0 auto;
+    padding:2px;
+    box-shadow:0px 0px 3px 3px pink;
     background-color: $fontColor;
     width:30%;
     color: $baseColor;
@@ -147,22 +153,28 @@ section {
   
       @media(max-width:768px)
 {
-  header{
-    img{
-    max-height:400px;
-  
-  } }
+   header{
+     height:400px;
+   #top-pic {
+     height:400px;
+     background:url("../images/top-pic.jpg");
+     background-size:cover;
+     background-position:center,center;
+ 
+   }
   
   section{
     .container1{
     flex-direction: column;
-    max-width:100%;
+    width:80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
      }
-  
-}}
+  }}}
 
 // PC
-@media (min-width: 769px) {
+@media (min-width:769px) {
   /* Base
   ------------------------------------------------------------*/
 }
